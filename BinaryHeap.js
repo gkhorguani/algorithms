@@ -17,6 +17,10 @@ class BinaryHeap {
             if (this.store[parentIndex] < this.store[indexOfKey]) {
                 this.swap(parentIndex, indexOfKey);
             }
+            else
+            {
+                break;
+            }
             indexOfKey = parentIndex;
         }
 
@@ -66,6 +70,11 @@ class BinaryHeap {
     getParentIndex(indexOfChild) {
         return Math.floor((indexOfChild - 1) / 2);
     }
+}
+
+class PriorityQueue
+{
+    
 }
 
 const main = () => {
